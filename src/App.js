@@ -5,19 +5,21 @@ import HomePage from "./Components/HomePage/HomePage";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import Login from "./Components/Login/Login";
+import SignUp from "./Components/Sign-up/SignUp";
 
 
 function App() {
   return (
     <Router>
-     <NavigationBar/>
+      <NavigationBar />
 
       <Routes>
-        <Route path="/" element={<HomePage/>}/>
-        <Route path="/about" element={<AboutUs/>}/>
-        <Route path="/contact" element={<ContactUs/>}/>
-        <Route path="/login" element={<Login/>}/>
-       
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+
 
       </Routes>
     </Router>
