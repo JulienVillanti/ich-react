@@ -1,0 +1,55 @@
+.aboutus-cointainer{
+    margin-top: 10%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 120%;
+    padding: 20px;
+    font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #eeebeb; 
+  }
+  
+  .aboutus-container h2 {
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+  .daniella-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .daniella-img {
+    width: 400px; 
+    height: 600px; 
+    border-radius: 10%; 
+    margin-right: 20px;
+  }
+  
+  .daniella-info {
+    text-align: left;
+  }
+  
+  .clinic-history {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 120%;
+    padding: 20px;
+    font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+   
+  }
+  
+  @media screen and (max-width: 768px) {
+    .daniella-section {
+      flex-direction: column; /* Altera para layout de coluna em telas menores */
+      align-items: center;
+    }
+  
+    .daniella-img {
+      margin-right: 0; /* Remove a margem direita para centralizar a imagem em telas menores */
+      margin-bottom: 20px; /* Adiciona margem inferior para separar a imagem do texto em telas menores */
+    }
+  }
+  
