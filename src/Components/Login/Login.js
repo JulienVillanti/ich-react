@@ -46,12 +46,9 @@ function Login() {
                 <div><Link to="/reset">Forgot Password</Link>
                 </div>
                 <div>
-                    Don't have an account? <Link to="/Sign-up">Sign-up</Link> now.
+                    Don't have an account? <Link to="/signup">Sign-up</Link> now.
                 </div>
             </div>
-
-
-
         </div>
 
 
