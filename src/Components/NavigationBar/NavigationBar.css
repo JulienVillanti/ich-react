@@ -11,8 +11,7 @@
   height: 55px;
   border-radius: 16px;
   background: #fff;
-
-  
+  z-index: 1000;
 }
 
 .NavBar ul,
@@ -20,14 +19,11 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  
- 
 }
 
 .NavBar li {
   display: inline-block;
   margin-right: 10px;
-  
 }
 
 .NavBar a {
@@ -35,16 +31,15 @@
   color: #83a197;
   transition: color 0.3s ease;
   padding: 5px;
-  
 }
 
 .NavBar a:hover {
-  color: #76676d ;
+  color: #76676d;
 }
 
 .logo-container {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .logo {
@@ -55,24 +50,21 @@
 }
 
 .logo-text {
-  font-size: 1.0em;
+  font-size: 1em;
   margin: 0;
 }
 
-
-
 @media screen and (max-width: 768px) {
   .NavBar {
-    height: auto; 
-    flex-direction:row; 
+    height: auto;
+    flex-direction: row;
     align-items: center;
     padding: 20px;
   }
 
   .NavBar li {
-    display: block; 
+    display: block;
     margin-right: 0;
     margin-bottom: 10px;
-    
   }
 }
