@@ -1,28 +1,29 @@
 .slide-container {
     margin: 0;
     text-align: center;
-    font-size: 30px;
-    line-height: 120%;
-    padding: 20px;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    padding: 1.25rem;
     font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: #eeebeb; 
 
 }
 h1{
-    font-size: 1.5em;
+    font-size: 3rem;
     margin: .67em 0;
-    margin-top: 20%;
+    margin-top: 12%;
 }
 
 .btn-schedule{
   align-items: center;
   justify-content: center;
-  border-radius: 10%;
+  border-radius: 20px; 
   background-color: #e9d0db;
-  width: 200px;
-  height: 80px;
+  width: 300px;
+  height: 100px;
   padding: 10px 20px;
   font-size: 20px;
+  margin-top: 20px;
 }
 .btn-schedule:hover{
   background-color: white ;
@@ -41,53 +42,146 @@ h1{
   left: 0;
   opacity: 0.1;
   border-radius: 15%; 
+  margin-bottom: 10%;
 
 }
 
 .home-container {
-  max-width: 1200px;
+  max-width: 75rem;
   margin:  auto;
-  padding: 10px;
+  padding: 0.625rem;
 }
-
-.container-promotions,img{
-
-  border-radius: 20%;
+.container-promotions{
+  display: flex;
+  justify-content: space-between;
   max-width: 50%;
-  height: 50%;
-  background-color: beige;
+  height: auto;
   
+  
+} 
+.photoPromotion1,.photoPromotion2 { 
+  border-radius: 20%;
+  margin-right: 5%;
+  margin-left: 5%;
+  width: 40%;
+  height: 40%;
+  margin-bottom: 10%;
+
 }
 
 footer {
   background-color: #e9d0db ;
-  padding: 20px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   border-radius: 10%; 
-  font-size: 18px;
-  margin-top:40px ;
-}
-.clinic-container {
-  width: 30%; 
+  padding: 0.625rem;
+  font-size: 1rem; 
+  margin-top: 1.25rem; font-size: 18px;
+ 
 }
 
-.clinic-container img {
-  width: 90%; 
-  max-width: 100%;
+.clinic-container{
+  width: 100%; 
+  max-width: 21rem;
   border-radius: 10%;
   margin-top: 10%; 
+  margin-left:7%;
 }
+.clinic-img8,.clinic-img4,.clinic-img5 {
+  width: 70%; 
+  height: auto;
+  border-radius: 10%;
+  margin-top: 5%;
 
+}
 .icon-container{
-  width: 200px; 
-  height: 100px;
-  margin-right: 60%;
-  margin-bottom: 3%;
-  text-align: center;
-  top: 10px;
-  
+  margin: 0 45%;
+  margin-top: 10%;
 }
 
+
+.icon-instagram{
+  margin-top: 5%;
+  width: 3.125rem; 
+  height: 3.125rem;
+
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .slide-container {
+      text-align: center;
+      font-size: 1.25rem; 
+      padding: 0.625rem; 
+      line-height: 1.2;
+  }
+
+  h1 {
+      font-size: 1.5rem; 
+      margin-top: 30%;
+  }
+
+  .btn-schedule {
+      width: 9.375rem; 
+      height: 3.75rem; 
+      font-size: 0.9375rem; 
+      margin-top: 5%;
+  }
+
+  .each-slide {
+      height: 60vw; 
+      margin-top: 9vw; 
+      border-radius: 15%; 
+  }
+
+  .home-container {
+      max-width: 75rem; 
+      margin: auto;
+      padding: 0.625rem;
+  }
+
+  .container-promotions {
+      display: flex;
+      justify-content: space-between;
+      max-width: 80%; 
+      flex-wrap: wrap; 
+  }
+
+  .photoPromotion1, .photoPromotion2 {
+    width: 35%; 
+  }
+
+  footer {
+      padding: 0.625rem;
+      font-size: 0.875rem; 
+      margin-top: 1.25rem;
+  }
+
+  .clinic-container {
+      width: 90%; 
+      max-width: 18.75rem;
+      margin-left: auto; 
+      margin-right: auto; 
+  }
+
+  .clinic-img8, .clinic-img4, .clinic-img5 {
+      width: 70%; 
+      margin-top: 1%;
+  }
+
+  .icon-container{
+    margin: 0 45%;
+    margin-top: 10%;
+  }
+  
+
+  .icon-instagram {
+      width: 2.5rem; 
+      height: 2.5rem; 
+     
+     
+  }
+
+}

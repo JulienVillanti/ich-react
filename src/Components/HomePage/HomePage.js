@@ -8,8 +8,8 @@ import clinic7 from "../Images/clinic7.jpeg";
 import clinic8 from "../Images/clinic8.jpeg";
 import photoPromotion1 from "../Images/photoPromotion1.jpg";
 import photoPromotion2 from "../Images/photoPromotion2.jpg";
-import { Link } from "react-router-dom";
 import icon_instagram from '../Images/icon_instagram.png'; 
+import { Link } from "react-router-dom";
 
 
 function HomePage(){
@@ -45,7 +45,7 @@ function HomePage(){
     return(
         <div className="slide-container">
             <h1> Melhore seu bem estar e agende uma sessão conosco</h1>
-            <p> Você so precisar chegar a tempo</p>
+            <p> Você só precisar chegar a tempo</p>
 
             <Link to="/services">
             <button className="btn-schedule">Marque sua sessão aqui </button>
@@ -68,9 +68,11 @@ function HomePage(){
         {/* START PROMOTIONS */}
         <div className="Container-Promotions">
             <p>Promoções:</p>
-            <img src={photoPromotion1} alt="ICH-Promotion" />
-            <img src={photoPromotion2} alt="ICH-Promotion" />
-        </div>
+            <img className="photoPromotion1" src={photoPromotion1} alt="ICH-Promotion" />
+            <img className="photoPromotion2" src={photoPromotion2} alt="ICH-Promotion" />
+            
+            </div>
+    
         {/* END PROMOTIONS */}
 
 
@@ -78,17 +80,17 @@ function HomePage(){
 {       /* START Footer  */}
             <footer>
             <div className="clinic-container">
-                <img src={clinic8} alt="ICH-Saúde da Mulher- Sobradinho" />
+                <img className="clinic-img8" src={clinic8} alt="ICH-Saúde da Mulher- Sobradinho" />
                 <p>📍 ICH-Saúde da Mulher- Sobradinho </p>
                 <p>📞 61 99606-0555</p>
             </div>
             <div className="clinic-container">
-                <img src={clinic4} alt="ICH-Saúde da Mulher- Formosa" />
+                <img className="clinic-img4" src={clinic4} alt="ICH-Saúde da Mulher- Formosa" />
                 <p>📍 ICH-Saúde da Mulher- Formosa </p>
                 <p>📞 61 99606-0546</p>
             </div>
             <div className="clinic-container">
-                <img src={clinic5} alt="ICH-D.O" />
+                <img  className="clinic-img5"src={clinic5} alt="ICH-D.O" />
                 <p>📍 ICH-D.O</p>
             </div>
 

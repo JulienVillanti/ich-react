@@ -1,0 +1,80 @@
+.services-container{
+    text-align: center;
+    font-size: 2rem; 
+    line-height: 1.2;
+    padding: 2rem; 
+    font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #eeebeb;
+}
+h6{
+    font-size: 2rem;
+}
+
+ /* .services{
+    text-align: center;
+    font-size: 1rem; 
+    line-height: 0.8;
+    font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: white ; 
+    margin-top: 10%;
+    border-radius: 20%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-top: 2rem; 
+    border-radius: 10px; 
+    max-width: 80%;
+    padding: 1rem;
+    
+   
+ }
+ .services-img{
+    max-width: 150px;
+    margin-right: 1rem;
+    border-radius: 10%;
+ } */
+
+ .services-gym, .services-pilates, .services-physio,.services-img {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+    font-size: 1rem; 
+    line-height: 1.5;
+    font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: white; 
+    border-radius: 10px;
+    max-width: 40rem;
+     width: 20rem;
+    height: 20rem;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid black;
+    margin: 2rem auto;
+}
+
+.services-gym:hover{
+    background-color: #e9d0db  ;
+}
+.services-pilates:hover{
+    background-color: pink ;
+  
+}
+.services-physio:hover{
+    background-color: #83a197; 
+  
+}
+
+.services-button{
+    border-radius: 20%;
+    background-color: white;
+    width: 45%;
+    max-width: 45%;
+    height: 100px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10%;  
+    font-size: 1.2rem;
+    
+}

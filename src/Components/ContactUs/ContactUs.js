@@ -1,9 +1,14 @@
 import React from "react";
 import './ContactUs.css';
 
+
+
 function ContactUs(){
     return(
-        <div>
+        <div className="contactus-cointainer">
+            
+          
+          
         
 
         </div>
