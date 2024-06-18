@@ -119,9 +119,11 @@ function Services() {
         {/* Popup do calendário */}
         {isPopupVisible && (
   <div className="popup">
+    
     <div className="popup-container">
       <div className="app-calendar"> 
         <p className="text-calendar">Agendamento: </p>
+        <button className='close-button' onClick={togglePopup}>Fechar</button>
         <div className="calendar-container">
           
           <Calendar 
@@ -133,6 +135,7 @@ function Services() {
             tileDisabled={(date) => !isWeekday(date) || isWeekend(date)}
           />
         </div>
+        
 
         {isWeekday(date) && (
           <div className="available-times">
@@ -174,7 +177,6 @@ function Services() {
         )}
 
       </div>
-      <button className='close-button' onClick={togglePopup}>Fechar</button>
     </div>
   </div>
 

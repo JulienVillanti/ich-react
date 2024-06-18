@@ -105,7 +105,6 @@ h6{
 /* PopUp */
 .popup {
     position: fixed;
-    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -114,17 +113,18 @@ h6{
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    max-height: 900px;
+    
  
 }
 
 .popup-container {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 10px;
+    border-radius: 30px;
     text-align: center;
-    max-width: 600px;
-    width: 80%;
+    max-width:600px;
+    width: 90%;
     margin: 0 auto;
+   
 }
 
 .popup button {
@@ -137,13 +137,14 @@ h6{
 .app-calendar {
     text-align: center;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 0.9;
     padding: 0.5rem;
     font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background: white;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width:500px;
    
 }
 
@@ -151,6 +152,7 @@ h6{
     font-weight: bold;
     font-size: 2rem;
     margin: 6rem;
+    margin-top: 40%;
     margin-bottom: 0;
 }
 
@@ -194,6 +196,7 @@ abbr[title] {
     width: 2rem;
     border: none;
     margin-top: 1%;
+    cursor: pointer; 
 }
 
 .calendar-container .react-calendar__month-view__days__day:hover {
@@ -215,7 +218,7 @@ abbr[title] {
     border-radius: 20px;
     background-color: #e9d0db;
     width: 25rem;
-    height: 5rem;
+    height: 3rem;
     padding: 10px;
     font-size: 20px;
     margin-top: 2%;
@@ -232,6 +235,7 @@ abbr[title] {
     padding: 10px;
     font-size: 20px;
     margin-top: 0;
+    
 }
 
 /* Horarios Disponiveis */
@@ -247,7 +251,6 @@ abbr[title] {
     margin-left: 4%; 
     margin-top: 10px;
     margin-bottom: 5%;
-    
   } 
  /* Horarios Disponiveis */
   .available-times ul li {
@@ -263,14 +266,17 @@ abbr[title] {
     width: 100%; 
 
   }
-
-   
     .close-button {
-        position: absolute;
-        top: 1rem; /* Distância do topo */
-        right: 35rem; /* Distância da direita */
+        position: fixed;
+        top: 10px; 
+        right: 10px; 
+        background-color: black;
+        border: 1px solid;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
         cursor: pointer;
-        z-index: 999;
+    
     }
 
 
@@ -341,11 +347,7 @@ abbr[title] {
         width: 100%;
         margin: 0 auto;
     }
-    .close-button {
-            top: 0.5rem;
-            right: 0.5rem;
     
-    }
 }
 
 @media screen and (max-width: 500px) {
@@ -412,10 +414,7 @@ abbr[title] {
         font-size: 1rem;
         margin-top: 20%;
     }
-    .close-button {
-        top: 0.3rem;
-        right: 0.3rem;
-    }
+    
 
 }
 
