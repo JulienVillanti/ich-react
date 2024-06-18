@@ -9,10 +9,13 @@ import SignUp from "./Components/Sign-up/SignUp";
 import Services from "./Components/Services/Services";
 
 
+
 function App() {
   return (
     <Router>
       <NavigationBar />
+    
+      
 
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -21,10 +24,13 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+       
 
 
       </Routes>
+    
     </Router>
+   
   );
 }
 

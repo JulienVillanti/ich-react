@@ -100,7 +100,39 @@ h6{
 
 .services-button1:hover, .services-button2:hover, .services-button3:hover{
     background-color: rgb(229, 225, 225);
+} 
+
+/* PopUp */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+ 
 }
+
+.popup-container {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.popup button {
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
 /* Style for Calendar */
 .app-calendar {
     text-align: center;
@@ -112,6 +144,7 @@ h6{
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 }
 
 .text-calendar {
@@ -127,18 +160,27 @@ h6{
     background-color: rgb(255, 255, 255);
     padding: 33px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px 0px, rgba(0, 0, 0, 0.08) 0px 0px 1px 0px;
-    width: 20rem;
-    height: 15rem;
+    width: 22rem;
+    height: 18rem;
+    margin-top: 5%;
 }
 
 /* Top of calendar = "maio de 2024" */
 .react-calendar__navigation button {
-    min-width: 40px;
-    font-size: 18px;
+    min-width: 45px;
+    font-size: 16px;
     margin-top: 1%;
     border: none;
-    margin-right: 5px;
+    margin-right: 0px;
+
 }
+
+/* Weekdays = "Seg", "Ter", "Qua", etc. */
+abbr[title] {
+    text-decoration: none;
+    border-bottom: none;
+}
+
 
 /* Numbers */
 .calendar-container .react-calendar__month-view__days__day {
@@ -151,66 +193,86 @@ h6{
     height: 2rem;
     width: 2rem;
     border: none;
+    margin-top: 1%;
 }
 
 .calendar-container .react-calendar__month-view__days__day:hover {
     background-color: #e9d0db;
     border-radius: 10%;
 }
-
-/* Bottom of calendar = "data:segundafeira etc" */
-.text-data {
+.react-calendar {
+    font-weight: bold;
+    }
+.bold {
+    font-weight: bold;
     display: flex;
+}
+/* Data selecionada */
+.text-data1{
+    display: inline-block;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     background-color: #e9d0db;
     width: 25rem;
-    height: 3rem;
+    height: 5rem;
     padding: 10px;
     font-size: 20px;
+    margin-top: 2%;
 }
-
-.react-calendar {
-    font-weight: bold;
-}
-
-/* Weekdays = "Seg", "Ter", "Qua", etc. */
-
-abbr[title] {
-    text-decoration: none;
-}
-
-/* PopUp */
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
+/* Horarios Disponiveis*/
+.text-data2 {
+    display: inline-block;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    border-radius: 20px;
+    background-color: #e9d0db;
+    width: 25rem;
+    height: 10rem;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 0;
 }
 
-.popup-container {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 500px;
-    width: 80%;
-    margin-bottom: 15%;
-    margin-top: 15%;
-}
+/* Horarios Disponiveis */
+ .available-times ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    /* quebrem para uma nova linha */
+    justify-content: flex-start; 
+    /* Espaçamento entre os botões */
+    gap: 10px;
+    margin-left: 4%; 
+    margin-top: 10px;
+    margin-bottom: 5%;
+    
+  } 
+ /* Horarios Disponiveis */
+  .available-times ul li {
+  margin: 0;
+  }
+  
+  .time-button:hover {
+    background-color: #83a197;
+  }
+  /* Horarios Disponiveis */
+  .selected-time {
+    margin-top: 10px;
+    width: 100%; 
 
-.popup button {
-    background-color: white;
-    padding: 0.5rem;
-    border-radius: 10px;
-}
+  }
+
+   
+    .close-button {
+        position: absolute;
+        top: 1rem; /* Distância do topo */
+        right: 35rem; /* Distância da direita */
+        cursor: pointer;
+        z-index: 999;
+    }
+
 
 @media screen and (max-width: 968px) {
     .services-container {
@@ -273,6 +335,16 @@ abbr[title] {
         font-size: 1rem;
         margin: 1rem 0;
         margin-top: 20%;
+    }
+    .popup-container {
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .close-button {
+            top: 0.5rem;
+            right: 0.5rem;
+    
     }
 }
 
@@ -340,15 +412,19 @@ abbr[title] {
         font-size: 1rem;
         margin-top: 20%;
     }
+    .close-button {
+        top: 0.3rem;
+        right: 0.3rem;
+    }
 
 }
 
-
+/* 
 .others-services {
     max-width: 60rem;
     height: 35rem;
     background-color: #fcf0ea;
-    padding: 20px; /* Espaçamento interno */
+    padding: 20px; 
     text-align: center; 
     border-radius: 30px;
     display: inline-block;
@@ -372,18 +448,11 @@ abbr[title] {
     margin-top: 0%;
     font-size: 20px;
     
-} 
+}  */
 
 
 
-/* <div>
-            <a href="#" class="tile-hover sticky-retreat-tile w-inline-block" 
-            style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                <div class="top-sticky-retreat"><h3 class="h3-retreat-name">Yoga</h3></div>
-                <img alt="" loading="eager" src="https://assets-global.website-files.com/64f92c17b1f729afb6bd30a2/651392b56521cf40a68cb671_65138eee2df82475a77e7116_Rythmia_yoga_1.45.2.jpeg" 
-                sizes="(max-width: 479px) 87vw, (max-width: 767px) 83vw, (max-width: 991px) 87vw, (max-width: 1439px) 89vw, 1241px" srcset="https://assets-global.website-files.com/64f92c17b1f729afb6bd30a2/651392b56521cf40a68cb671_65138eee2df82475a77e7116_Rythmia_yoga_1.45.2-p-500.jpeg 500w, https://assets-global.website-files.com/64f92c17b1f729afb6bd30a2/651392b56521cf40a68cb671_65138eee2df82475a77e7116_Rythmia_yoga_1.45.2-p-800.jpeg 800w, https://assets-global.website-files.com/64f92c17b1f729afb6bd30a2/651392b56521cf40a68cb671_65138eee2df82475a77e7116_Rythmia_yoga_1.45.2-p-1080.jpeg 1080w, https://assets-global.website-files.com/64f92c17b1f729afb6bd30a2/651392b56521cf40a68cb671_65138eee2df82475a77e7116_Rythmia_yoga_1.45.2.jpeg 1422w" class="image-retreat-sticky">
-                <div class="paragraph-big program-description-copy">Achieve new levels of strength, flexibility, and connection between body, mind, and breath, and the skills for daily practice for sustained well-being and growth. Our seasoned teachers provide adaptations for all levels, making them suitable whether you are a beginner or an expert yogi.</div></a>
-            </div> */
+
 
             /* :root {
                 --white: white;
