@@ -1,80 +1,403 @@
+.background-services{
+    background-color: #eeebeb;
+}
 .services-container{
     text-align: center;
     font-size: 2rem; 
     line-height: 1.2;
     padding: 2rem; 
     font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: #eeebeb;
+    
 }
 h6{
     font-size: 2rem;
+    margin-top: 10%;
 }
 
- /* .services{
-    text-align: center;
-    font-size: 1rem; 
-    line-height: 0.8;
-    font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: white ; 
-    margin-top: 10%;
-    border-radius: 20%;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    margin-top: 2rem; 
-    border-radius: 10px; 
-    max-width: 80%;
-    padding: 1rem;
-    
-   
- }
- .services-img{
-    max-width: 150px;
-    margin-right: 1rem;
-    border-radius: 10%;
- } */
-
- .services-gym, .services-pilates, .services-physio,.services-img {
+ .services-gym, .services-pilates, .services-physio {
     margin-top: 10%;
     margin-bottom: 10%;
-    text-align: center;
+    text-align: left;
     font-size: 1rem; 
     line-height: 1.5;
     font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: white; 
     border-radius: 10px;
-    max-width: 40rem;
-     width: 20rem;
-    height: 20rem;
+    max-width: 60rem;
+    width: 70rem;
+    height: 15rem;
     margin: auto;
     padding: 1rem;
     border: 1px solid black;
     margin: 2rem auto;
+    display: flex;
+}
+.services-title{
+    font-size: 2rem;
+    margin-top: 10%;
+    font-weight: 500;
+}
+.paragraph-services1{ 
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    font-size: 20px;
+}
+.paragraph-services2{
+    display: inline-block;
+    margin-left: 16%;
+    margin-right: 10%;
+    margin-top: 3%;
+    font-size: 20px;
+
+}
+.paragraph-services3{
+    display: inline-block;
+    margin-left: 7%;
+    margin-right: 10%;
+    margin-top: 3%;
+    font-size: 20px;
 }
 
 .services-gym:hover{
     background-color: #e9d0db  ;
 }
 .services-pilates:hover{
-    background-color: pink ;
+    background-color: #f69e8a;;
   
 }
 .services-physio:hover{
     background-color: #83a197; 
-  
+
 }
 
-.services-button{
-    border-radius: 20%;
+.services-button1, .services-button3{
+    margin-left: 3%;
+    border-radius: 10px;
     background-color: white;
     width: 45%;
-    max-width: 45%;
-    height: 100px;
+    max-width: 50%;
+    height: 70px;
     padding: 10px 20px;
     font-size: 16px;
     margin-top: 10%;  
     font-size: 1.2rem;
+}
+.services-button2{
+    margin-left:0%;
+    border-radius: 10px;
+    background-color: white;
+    width: 45%;
+    max-width: 50%;
+    height: 70px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10%;  
+    font-size: 1.2rem;
+
+}
+
+.services-button1:hover, .services-button2:hover, .services-button3:hover{
+    background-color: rgb(229, 225, 225);
+}
+/* Style for Calendar */
+.app-calendar {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.5rem;
+    font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-calendar {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 6rem;
+    margin-bottom: 0;
+}
+
+.calendar-container {
+    border-radius: 10%;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    padding: 33px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px 0px, rgba(0, 0, 0, 0.08) 0px 0px 1px 0px;
+    width: 20rem;
+    height: 15rem;
+}
+
+/* Top of calendar = "maio de 2024" */
+.react-calendar__navigation button {
+    min-width: 40px;
+    font-size: 18px;
+    margin-top: 1%;
+    border: none;
+    margin-right: 5px;
+}
+
+/* Numbers */
+.calendar-container .react-calendar__month-view__days__day {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border: none;
+}
+
+.calendar-container .react-calendar__month-view__days__day:hover {
+    background-color: #e9d0db;
+    border-radius: 10%;
+}
+
+/* Bottom of calendar = "data:segundafeira etc" */
+.text-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #e9d0db;
+    width: 25rem;
+    height: 3rem;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.react-calendar {
+    font-weight: bold;
+}
+
+/* Weekdays = "Seg", "Ter", "Qua", etc. */
+
+abbr[title] {
+    text-decoration: none;
+}
+
+/* PopUp */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 80%;
+    margin-bottom: 15%;
+    margin-top: 15%;
+}
+
+.popup button {
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 968px) {
+    .services-container {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 1;
+        padding: 2rem;
+    }
+
+    h6 {
+        font-size: 1.5rem;
+        margin-top: 20%;
+    }
+
+    .services-gym,
+    .services-pilates,
+    .services-physio {
+        margin-top: 0%;
+        margin-bottom: 0%;
+        font-size: 1.2rem;
+        max-width: 30rem;
+        width: 100rem;
+        height: 15rem;
+        margin: 2rem auto;
+    }
+
+    .services-title {
+        font-size: 1.5rem;
+        margin-top: 20%;
+        font-weight: 500;
+    }
+
+    .paragraph-services1,
+    .paragraph-services3 {
+        display: grid;
+        margin-right: 1%;
+        margin-top: 0%;
+        font-size: 15px;
+    }
+
+    .paragraph-services2 {
+        display: grid;
+        font-size: 15px;
+        margin-top: 0%;
+        margin-right: 5%;
+    }
+
+    .services-button1,
+    .services-button3 {
+        width: 90%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        margin: 1rem 0;
+        margin-top: 20%;
+    }
+
+    .services-button2 {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        margin: 1rem 0;
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .services-container {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 1;
+        padding: 2rem;
+    }
+
+    h6 {
+        font-size: 1.5rem;
+        margin-top: 20%;
+    }
+
+    .services-title {
+        font-size: 1rem;
+       
+    }
+
+    .services-gym,
+    .services-pilates,
+    .services-physio {
+        margin-top: 0%;
+        margin-bottom: 0%;
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 25rem;
+        width: 70rem;
+        height: 15rem;
+        margin: auto;
+        padding: 1rem;
+        margin: 2rem auto;
+        display: flex;
+        
+    }
+
+    .paragraph-services1{ 
+        display: inline;
+        text-align: left;
+    }
+    .paragraph-services2{
+       display: inline;
+       margin-left: 17%;
+       text-align: left;
+    
+    }
+    .paragraph-services3 {
+        display: inline;
+        text-align: left;
+        margin-left: 7%;
+    }
+    
+    .services-button1,
+    .services-button3 {
+        width: 60%;
+        font-size: 1rem;
+        margin-top: 20%;
+    }
+
+    .services-button2 {
+        width: 65%;
+        font-size: 1rem;
+        margin-top: 20%;
+    }
+
+}
+
+
+.others-services {
+    max-width: 60rem;
+    height: 35rem;
+    background-color: #fcf0ea;
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; 
+    border-radius: 30px;
+    display: inline-block;
+   
     
 }
+.title-nutricao{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+
+}
+.img-nutricao{
+    border-radius: 30px;
+    max-width: 20rem; 
+    height: auto;
+}
+.paragraph-services4{
+    display: grid;
+    margin-right: 1%;
+    margin-top: 0%;
+    font-size: 20px;
+    
+} 
+
+
+
+/* <div>
+            <a href="#" class="tile-hover sticky-retreat-tile w-inline-block" 
+            style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                <div class="top-sticky-retreat"><h3 class="h3-retreat-name">Yoga</h3></div>
+                <img alt="" loading="eager" src="https://assets-global.website-files.com/64f92c17b1f729afb6bd30a2/651392b56521cf40a68cb671_65138eee2df82475a77e7116_Rythmia_yoga_1.45.2.jpeg" 
+                sizes="(max-width: 479px) 87vw, (max-width: 767px) 83vw, (max-width: 991px) 87vw, (max-width: 1439px) 89vw, 1241px" srcset="https://assets-global.website-files.com/64f92c17b1f729afb6bd30a2/651392b56521cf40a68cb671_65138eee2df82475a77e7116_Rythmia_yoga_1.45.2-p-500.jpeg 500w, https://assets-global.website-files.com/64f92c17b1f729afb6bd30a2/651392b56521cf40a68cb671_65138eee2df82475a77e7116_Rythmia_yoga_1.45.2-p-800.jpeg 800w, https://assets-global.website-files.com/64f92c17b1f729afb6bd30a2/651392b56521cf40a68cb671_65138eee2df82475a77e7116_Rythmia_yoga_1.45.2-p-1080.jpeg 1080w, https://assets-global.website-files.com/64f92c17b1f729afb6bd30a2/651392b56521cf40a68cb671_65138eee2df82475a77e7116_Rythmia_yoga_1.45.2.jpeg 1422w" class="image-retreat-sticky">
+                <div class="paragraph-big program-description-copy">Achieve new levels of strength, flexibility, and connection between body, mind, and breath, and the skills for daily practice for sustained well-being and growth. Our seasoned teachers provide adaptations for all levels, making them suitable whether you are a beginner or an expert yogi.</div></a>
+            </div> */
+
+            /* :root {
+                --white: white;
+                --black: #2d2b2b;
+                --dark\<deleted\|variable-4aa19a56\>: #564418;
+                --powder-blue: #c4e4df;
+                --light-background\<deleted\|variable-ae93f2c2\>: #fff9e9;
+                --light: #fff7e3;
+                --seashell: #fcf0ea;
+                --medium-turquoise: #8bcfca;
+                --dark-salmon: #f69e8a;
+                --peach-puff: #fabe9b;
+                --light-sea-green: #0fb8ad;
+                --elevation\<deleted\|variable-240d8401\>: #f5ecd7;
+                --red: #c00;
+                --spark-library--foreground-secondary: rgba(0, 0, 0, .76);
+            } */

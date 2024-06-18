@@ -1,48 +1,94 @@
-import React from "react";
 import './Services.css';
-// import img2 from '../Images/massage-img2.jpeg'
+import img2 from '../Images/massage-img2.jpeg'
+import Calendar from 'react-calendar';
+import React,{ useState } from 'react';
 
 function Services() {
-    return(     
-        <div className="services-container">
-            <h6>Conheca nossos Serviços: </h6>
-            <div className="services">
-            {/* <img src={img2} alt="Services" className="services-img" /> */}
-                <p> Fisioterapia</p>
-                <p> Nutricionista</p>
-                <p> Psicologa</p>
-                <p> Estetica Facial e Corporal</p>
-                <p> Massagem</p>
-                <p> Terapias Integrativas</p>
-                <p> Academia</p>
-                <p> Pilates</p>
-                <p> RPG</p>
-                
 
-            </div>
+   //Create a calendar 
+      const [date,setDate] = useState(new Date());
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+
+    //Pop up-Controling visibility
+    const  [isPopupVisible,setIsPopupVisible] = useState(false);
+
+    //To change the popup
+    const togglePopup = () => {
+        setIsPopupVisible(!isPopupVisible);
+    }
+
+    return(  
+     <div className='background-services'>
+        {/*Start services  */}
+        <div className="services-container">
+            <h6>Conheça nossos Serviços: </h6>
+        
             <div className="services-gym">
-                <p>Academia</p>
+                <p className='services-title'>ACADEMIA</p>
+                <div className='paragraph-services1'>
                 <p>Equipamentos modernos e variados para todos os níveis de treino.</p>
                 <p>Treinamento personalizado e acompanhamento profissional.</p>
-                <button className="services-button">Agende Aqui</button>
+                </div>
+                <button className="services-button1" onClick={togglePopup}>Agende Aqui</button>
 
             </div>
-            <div className="services-pilates">
-                <p>Pilates</p>
+                <div className="services-pilates">
+                <p className='services-title'>PILATES</p>
+                <div className='paragraph-services2'>
                 <p>Melhore sua postura e flexibilidade com nossos exercícios de Pilates.</p>
                 <p>Aulas em grupo.</p>
-                <button className="services-button">Agende Aqui</button>
+            </div>
+                <button className="services-button2" onClick={togglePopup}>Agende Aqui</button>
 
             </div>
-           
-            <div className="services-physio">
-                <p>Fisioterapia</p>
+                <div className="services-physio">
+                <p className='services-title'>FISIOTERAPIA</p>
+                <div className='paragraph-services3'>
                 <p>Tratamentos personalizados para recuperação e reabilitação.</p>
                 <p>Profissionais qualificados e experientes.</p>
-                <button className="services-button">Agende Aqui</button>
+            </div>
+                <button className="services-button3" onClick={togglePopup}>Agende Aqui</button>
 
             </div>
-          
+
+                <div className="others-services">
+                <p className='title-nutricao'>NUTRIÇÃO</p>
+                <img className='img-nutricao' src={img2} alt="Imagem de Nutrição" /> 
+                <div className='paragraph-services4'>
+                <p>Consultas personalizadas para promover uma alimentação saudável e equilibrada.</p>
+                <p>Orientações nutricionais adaptadas às necessidades individuais de cada cliente.</p>
+            </div>
+            </div>
+
+            
+            
+            
+            
+
+        </div>
+          {/* End services */}
+
+          {isPopupVisible && (
+            <div className="popup">
+                <div className="popup-container">
+                    <div className="app-calendar"> 
+                        <p className="text-calendar">Agendamento: </p>
+                        <div className="calendar-container">
+                            <Calendar onChange={setDate} value ={date}/>
+                        </div>
+                        <p className="text-data">
+                            <span className="bold"> Data: </span>{' '}
+                            {/* Change the idiom for portuguese */}
+                            {date.toLocaleDateString('pt-BR', options)}
+                        </p>
+                    </div>
+                    <button onClick={togglePopup}>Fechar</button>
+                </div>
+            </div>
+        )}
+        
+            {/* End Popup */}
         </div>
     );
 }
