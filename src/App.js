@@ -7,7 +7,7 @@ import ContactUs from "./Components/ContactUs/ContactUs";
 import Login from "./Components/Login/Login";
 import SignUp from "./Components/Sign-up/SignUp";
 import Services from "./Components/Services/Services";
-import Calendar from './Components/Calendar/Calendar.js';
+
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/calendar" element={<Calendar />} />
+      
 
 
       </Routes>
