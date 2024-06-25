@@ -105,6 +105,7 @@ h6{
 /* PopUp */
 .popup {
     position: fixed;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -113,18 +114,8 @@ h6{
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    max-height: 900px;
+    max-height: 1000px; 
     
- 
-}
-
-.popup-container {
-    border-radius: 30px;
-    text-align: center;
-    max-width:600px;
-    width: 90%;
-    margin: 0 auto;
-   
 }
 
 .popup button {
@@ -144,15 +135,15 @@ h6{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width:500px;
-   
+    max-width:600px;
+    height: 800px;
 }
 
 .text-calendar {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 6rem;
-    margin-top: 40%;
+    margin-top: 12%;
     margin-bottom: 0;
 }
 
@@ -163,8 +154,8 @@ h6{
     padding: 33px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px 0px, rgba(0, 0, 0, 0.08) 0px 0px 1px 0px;
     width: 22rem;
-    height: 18rem;
-    margin-top: 5%;
+    height: 16rem;
+    margin-top: 15%;
 }
 
 /* Top of calendar = "maio de 2024" */
@@ -174,7 +165,6 @@ h6{
     margin-top: 1%;
     border: none;
     margin-right: 0px;
-
 }
 
 /* Weekdays = "Seg", "Ter", "Qua", etc. */
@@ -182,7 +172,6 @@ abbr[title] {
     text-decoration: none;
     border-bottom: none;
 }
-
 
 /* Numbers */
 .calendar-container .react-calendar__month-view__days__day {
@@ -205,7 +194,8 @@ abbr[title] {
 }
 .react-calendar {
     font-weight: bold;
-    }
+}
+
 .bold {
     font-weight: bold;
     display: flex;
@@ -235,9 +225,16 @@ abbr[title] {
     padding: 10px;
     font-size: 20px;
     margin-top: 0;
+    margin-bottom: 1%;
     
 }
-
+/* Alert for saturday end  Sunday */
+.message-weekend {
+    color: red;
+    font-size: 20px;
+    margin-top: 20%;
+    font-weight: 500;
+}
 /* Horarios Disponiveis */
  .available-times ul {
     list-style-type: none;
@@ -414,58 +411,17 @@ abbr[title] {
         font-size: 1rem;
         margin-top: 20%;
     }
+    .popup-container {
+        max-width: 600px;
+        width: 100%;
+       
+    }
+    
     
 
 }
 
-/* 
-.others-services {
-    max-width: 60rem;
-    height: 35rem;
-    background-color: #fcf0ea;
-    padding: 20px; 
-    text-align: center; 
-    border-radius: 30px;
-    display: inline-block;
-   
-    
-}
-.title-nutricao{
-    font-size: 1.5rem;
-    line-height: 1.5;
-    margin-bottom: 10px;
-
-}
-.img-nutricao{
-    border-radius: 30px;
-    max-width: 20rem; 
-    height: auto;
-}
-.paragraph-services4{
-    display: grid;
-    margin-right: 1%;
-    margin-top: 0%;
-    font-size: 20px;
-    
-}  */
 
 
 
 
-
-            /* :root {
-                --white: white;
-                --black: #2d2b2b;
-                --dark\<deleted\|variable-4aa19a56\>: #564418;
-                --powder-blue: #c4e4df;
-                --light-background\<deleted\|variable-ae93f2c2\>: #fff9e9;
-                --light: #fff7e3;
-                --seashell: #fcf0ea;
-                --medium-turquoise: #8bcfca;
-                --dark-salmon: #f69e8a;
-                --peach-puff: #fabe9b;
-                --light-sea-green: #0fb8ad;
-                --elevation\<deleted\|variable-240d8401\>: #f5ecd7;
-                --red: #c00;
-                --spark-library--foreground-secondary: rgba(0, 0, 0, .76);
-            } */
