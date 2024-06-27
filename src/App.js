@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import NavigationBar from "./Components/NavigationBar/NavigationBar";
 import HomePage from "./Components/HomePage/HomePage";
@@ -10,10 +10,14 @@ import Services from "./Components/Services/Services";
 import Maps from "./Components/Maps/Maps";
 
 
+
 function App() {
+  
   return (
     <Router>
       <NavigationBar />
+    
+      
 
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -24,8 +28,11 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/Maps" element={<Maps />} />
 
+
       </Routes>
+    
     </Router>
+   
   );
 }
 
