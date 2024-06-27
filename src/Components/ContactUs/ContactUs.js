@@ -35,10 +35,10 @@ function ContactUs() {
 
         
             <div className="contact-maps-wrapper">
-            <h2>Contact Us</h2>
+            <h2>Entre em contato!</h2>
             <form onSubmit={handleSubmit} className="contact-form">
                 <label>
-                    Name:
+                    Nome:
                     <input 
                         type="text" 
                         name="name" 
@@ -48,7 +48,7 @@ function ContactUs() {
                     />
                 </label>
                 <label>
-                    Email:
+                    E-mail:
                     <input 
                         type="email" 
                         name="email" 
@@ -58,7 +58,7 @@ function ContactUs() {
                     />
                 </label>
                 <label>
-                    Message:
+                    Mensagem:
                     <textarea 
                         name="message" 
                         value={formData.message} 
@@ -66,18 +66,11 @@ function ContactUs() {
                         required 
                     ></textarea>
                 </label>
-                <button type="submit">Submit</button>
+                <button type="submit">Enviar</button>
             </form>
         </div>
         <div className="contact-container">
                 <Maps />
-                <div className="maps-text-container">
-                    <h3>Our Office Location</h3>
-                    <p>123 Main Street</p>
-                    <p>City, State, ZIP Code</p>
-                    <p>Contact us at: (123) 456-7890</p>
-                    <p>Email: contact@company.com</p>
-                </div>
             </div>
         </div>
         
