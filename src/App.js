@@ -7,6 +7,7 @@ import ContactUs from "./Components/ContactUs/ContactUs";
 import Login from "./Components/Login/Login";
 import SignUp from "./Components/Sign-up/SignUp";
 import Services from "./Components/Services/Services";
+import Maps from "./Components/Maps/Maps";
 
 
 function App() {
