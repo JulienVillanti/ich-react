@@ -1,80 +1,427 @@
+.background-services{
+    background-color: #eeebeb;
+}
 .services-container{
     text-align: center;
     font-size: 2rem; 
     line-height: 1.2;
     padding: 2rem; 
     font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: #eeebeb;
+    
 }
 h6{
     font-size: 2rem;
+    margin-top: 10%;
 }
 
- /* .services{
-    text-align: center;
-    font-size: 1rem; 
-    line-height: 0.8;
-    font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: white ; 
-    margin-top: 10%;
-    border-radius: 20%;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    margin-top: 2rem; 
-    border-radius: 10px; 
-    max-width: 80%;
-    padding: 1rem;
-    
-   
- }
- .services-img{
-    max-width: 150px;
-    margin-right: 1rem;
-    border-radius: 10%;
- } */
-
- .services-gym, .services-pilates, .services-physio,.services-img {
+ .services-gym, .services-pilates, .services-physio {
     margin-top: 10%;
     margin-bottom: 10%;
-    text-align: center;
+    text-align: left;
     font-size: 1rem; 
     line-height: 1.5;
     font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: white; 
     border-radius: 10px;
-    max-width: 40rem;
-     width: 20rem;
-    height: 20rem;
+    max-width: 60rem;
+    width: 70rem;
+    height: 15rem;
     margin: auto;
     padding: 1rem;
     border: 1px solid black;
     margin: 2rem auto;
+    display: flex;
+}
+.services-title{
+    font-size: 2rem;
+    margin-top: 10%;
+    font-weight: 500;
+}
+.paragraph-services1{ 
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    font-size: 20px;
+}
+.paragraph-services2{
+    display: inline-block;
+    margin-left: 16%;
+    margin-right: 10%;
+    margin-top: 3%;
+    font-size: 20px;
+
+}
+.paragraph-services3{
+    display: inline-block;
+    margin-left: 7%;
+    margin-right: 10%;
+    margin-top: 3%;
+    font-size: 20px;
 }
 
 .services-gym:hover{
     background-color: #e9d0db  ;
 }
 .services-pilates:hover{
-    background-color: pink ;
+    background-color: #f69e8a;;
   
 }
 .services-physio:hover{
     background-color: #83a197; 
-  
+
 }
 
-.services-button{
-    border-radius: 20%;
+.services-button1, .services-button3{
+    margin-left: 3%;
+    border-radius: 10px;
     background-color: white;
     width: 45%;
-    max-width: 45%;
-    height: 100px;
+    max-width: 50%;
+    height: 70px;
     padding: 10px 20px;
     font-size: 16px;
     margin-top: 10%;  
     font-size: 1.2rem;
+}
+.services-button2{
+    margin-left:0%;
+    border-radius: 10px;
+    background-color: white;
+    width: 45%;
+    max-width: 50%;
+    height: 70px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10%;  
+    font-size: 1.2rem;
+
+}
+
+.services-button1:hover, .services-button2:hover, .services-button3:hover{
+    background-color: rgb(229, 225, 225);
+} 
+
+/* PopUp */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    max-height: 1000px; 
     
 }
+
+.popup button {
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+/* Style for Calendar */
+.app-calendar {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 0.9;
+    padding: 0.5rem;
+    font-family: Clarkson, Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width:600px;
+    height: 800px;
+}
+
+.text-calendar {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 6rem;
+    margin-top: 12%;
+    margin-bottom: 0;
+}
+
+.calendar-container {
+    border-radius: 10%;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    padding: 33px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px 0px, rgba(0, 0, 0, 0.08) 0px 0px 1px 0px;
+    width: 22rem;
+    height: 16rem;
+    margin-top: 15%;
+}
+
+/* Top of calendar = "maio de 2024" */
+.react-calendar__navigation button {
+    min-width: 45px;
+    font-size: 16px;
+    margin-top: 1%;
+    border: none;
+    margin-right: 0px;
+}
+
+/* Weekdays = "Seg", "Ter", "Qua", etc. */
+abbr[title] {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+/* Numbers */
+.calendar-container .react-calendar__month-view__days__day {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    margin-top: 1%;
+    cursor: pointer; 
+}
+
+.calendar-container .react-calendar__month-view__days__day:hover {
+    background-color: #e9d0db;
+    border-radius: 10%;
+}
+.react-calendar {
+    font-weight: bold;
+}
+
+.bold {
+    font-weight: bold;
+    display: flex;
+}
+/* Data selecionada */
+.text-data1{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #e9d0db;
+    width: 25rem;
+    height: 3rem;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 2%;
+}
+/* Horarios Disponiveis*/
+.text-data2 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #e9d0db;
+    width: 25rem;
+    height: 10rem;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 1%;
+    
+}
+/* Alert for saturday end  Sunday */
+.message-weekend {
+    color: red;
+    font-size: 20px;
+    margin-top: 20%;
+    font-weight: 500;
+}
+/* Horarios Disponiveis */
+ .available-times ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    /* quebrem para uma nova linha */
+    justify-content: flex-start; 
+    /* Espaçamento entre os botões */
+    gap: 10px;
+    margin-left: 4%; 
+    margin-top: 10px;
+    margin-bottom: 5%;
+  } 
+ /* Horarios Disponiveis */
+  .available-times ul li {
+  margin: 0;
+  }
+  
+  .time-button:hover {
+    background-color: #83a197;
+  }
+  /* Horarios Disponiveis */
+  .selected-time {
+    margin-top: 10px;
+    width: 100%; 
+
+  }
+    .close-button {
+        position: fixed;
+        top: 10px; 
+        right: 10px; 
+        background-color: black;
+        border: 1px solid;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    
+    }
+
+
+@media screen and (max-width: 968px) {
+    .services-container {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 1;
+        padding: 2rem;
+    }
+
+    h6 {
+        font-size: 1.5rem;
+        margin-top: 20%;
+    }
+
+    .services-gym,
+    .services-pilates,
+    .services-physio {
+        margin-top: 0%;
+        margin-bottom: 0%;
+        font-size: 1.2rem;
+        max-width: 30rem;
+        width: 100rem;
+        height: 15rem;
+        margin: 2rem auto;
+    }
+
+    .services-title {
+        font-size: 1.5rem;
+        margin-top: 20%;
+        font-weight: 500;
+    }
+
+    .paragraph-services1,
+    .paragraph-services3 {
+        display: grid;
+        margin-right: 1%;
+        margin-top: 0%;
+        font-size: 15px;
+    }
+
+    .paragraph-services2 {
+        display: grid;
+        font-size: 15px;
+        margin-top: 0%;
+        margin-right: 5%;
+    }
+
+    .services-button1,
+    .services-button3 {
+        width: 90%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        margin: 1rem 0;
+        margin-top: 20%;
+    }
+
+    .services-button2 {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        margin: 1rem 0;
+        margin-top: 20%;
+    }
+    .popup-container {
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .services-container {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 1;
+        padding: 2rem;
+    }
+
+    h6 {
+        font-size: 1.5rem;
+        margin-top: 20%;
+    }
+
+    .services-title {
+        font-size: 1rem;
+       
+    }
+
+    .services-gym,
+    .services-pilates,
+    .services-physio {
+        margin-top: 0%;
+        margin-bottom: 0%;
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 25rem;
+        width: 70rem;
+        height: 15rem;
+        margin: auto;
+        padding: 1rem;
+        margin: 2rem auto;
+        display: flex;
+        
+    }
+
+    .paragraph-services1{ 
+        display: inline;
+        text-align: left;
+    }
+    .paragraph-services2{
+       display: inline;
+       margin-left: 17%;
+       text-align: left;
+    
+    }
+    .paragraph-services3 {
+        display: inline;
+        text-align: left;
+        margin-left: 7%;
+    }
+    
+    .services-button1,
+    .services-button3 {
+        width: 60%;
+        font-size: 1rem;
+        margin-top: 20%;
+    }
+
+    .services-button2 {
+        width: 65%;
+        font-size: 1rem;
+        margin-top: 20%;
+    }
+    .popup-container {
+        max-width: 600px;
+        width: 100%;
+       
+    }
+    
+    
+
+}
+
+
+
+
+
