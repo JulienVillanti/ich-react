@@ -7,6 +7,7 @@ import ContactUs from "./Components/ContactUs/ContactUs";
 import Login from "./Components/Login/Login";
 import SignUp from "./Components/Sign-up/SignUp";
 import Services from "./Components/Services/Services";
+import Maps from "./Components/Maps/Maps";
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-
+        <Route path="/Maps" element={<Maps />} />
 
       </Routes>
     </Router>
