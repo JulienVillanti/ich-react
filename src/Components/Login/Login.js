@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../../AuthContext";
-import { signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
+import { signInWithEmailAndPassword} from "firebase/auth";
 import './Login.css';
 
 
@@ -26,14 +26,6 @@ const Login = () => {
         }
     };
 
-    // const handlePasswordReset = async () => {
-    //     try {
-    //         await sendPasswordResetEmail(auth, email);
-    //         console.log('Password reset email sent');
-    //     } catch (error) {
-    //         console.error('Error sending password reset email', error);
-    //     }
-    // };
 
     return (
         <div className="login">
