@@ -4,19 +4,24 @@ import { auth } from "../../firebase";
 import { sendPasswordResetEmail } from "firebase/auth";
 import './PasswordReset.css';
 
-export const PasswordReset = () => {
+const PasswordReset = () => {
     const [email, setEmail] = useState('');
+    const [error, setError] = useState(null);
+    const [message, setMessage] = useState('');
     const navigate = useNavigate();
 
-    const handlePasswordReset = async () => {
+    const handlePasswordReset = async (e) => {
+        e.preventDefault();
+        setError('');
+        setMessage('');
         try {
             await sendPasswordResetEmail(auth, email);
-            console.log('Password reset link has been sent')
-            alert('Password reset link has been sent, please check your mailbox');
+            console.log('Password reset link sent to the user email');
+            setMessage('Password reset link has been sent, please check your mailbox');
             setTimeout(() => navigate('/login'), 3000);
         } catch (error) {
             console.error('Error sending password reset email', error);
-            alert('Error sending password reset email, pllease try again');
+            setError('Error sending password reset email, pllease try again');
         }
     }
 
@@ -35,6 +40,8 @@ export const PasswordReset = () => {
                     />
                     <button type="submit" className="password-reset__btn" >Submit</button>
                 </form>
+                {message && <p className="message">{message}</p>}
+                {error && <p className="error">{error}</p>}
             </div>
         </div>
     )
