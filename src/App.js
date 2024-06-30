@@ -11,7 +11,7 @@ import Services from "./Components/Services/Services";
 import Profile from "./Components/Profile/Profile";
 import PasswordReset from "./Components/PasswordReset/PasswordReset";
 import Maps from "./Components/Maps/Maps";
-import { AuthProvider } from "./AuthContext";
+
 
 
 
