@@ -39,3 +39,5 @@ export const PasswordReset = () => {
         </div>
     )
 }
+
+export default PasswordReset;
