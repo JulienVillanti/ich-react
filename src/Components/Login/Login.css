@@ -4,24 +4,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #eeebeb; 
-  
+  background-color: #eeebeb;
 }
 
 .login__title {
   text-align: center;
   align-self: center;
-  color: pink;
+  color: black;
   font-weight: 700;
 }
 
 .login__container {
   display: flex;
+  width: 40%;
   flex-direction: column;
   text-align: center;
-  background-color: #83a197;
+  margin-top: 10%;
   padding: 30px;
   border-radius: 20px;
+  border: solid 1px #83a197;
 }
 
 .login__textbox {
@@ -48,10 +49,9 @@
   font-weight: 800;
 }
 
-
 /* Media queries for screens */
 
-/* 320px */
+/* 500px */
 
 @media screen and (max-width: 500px) {
   .login {
@@ -67,7 +67,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: #83a197;
+    margin-top: 20%;
     padding: 20px;
     border-radius: 20px;
   }

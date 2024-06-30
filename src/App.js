@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { getAuth } from "firebase/auth";
 import NavigationBar from "./Components/NavigationBar/NavigationBar";
 import HomePage from "./Components/HomePage/HomePage";
 import AboutUs from "./Components/AboutUs/AboutUs";
@@ -16,9 +17,6 @@ function App() {
   return (
     <Router>
       <NavigationBar />
-    
-      
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUs />} />
@@ -27,10 +25,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/Maps" element={<Maps />} />
-
-
       </Routes>
-    
     </Router>
    
   );

@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { auth } from "../../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import './Login.css';
 
 
-function Login() {
+const Login = () => { 
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    // const [user, loading, error] = useAuthState(auth); Need to add that with firebase
+    const [error, setError] = useState(null); 
     const navigate = useNavigate();
 
     // const onSubmit = (e) => {

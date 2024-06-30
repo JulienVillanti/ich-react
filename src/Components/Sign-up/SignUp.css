@@ -14,6 +14,11 @@
   font-weight: 700;
 }
 
+form{
+  display: flex;
+  flex-direction: column
+}
+
 .signup__container {
   display: flex;
   flex-direction: column;
