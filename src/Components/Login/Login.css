@@ -44,7 +44,7 @@
 .login__btn:hover {
   background-color: #83a197;
   transition: all 0.3s;
-  border: 1px solid pink;
+  border: 1px solid black;
   color: pink;
   font-weight: 800;
 }
