@@ -48,7 +48,7 @@ const SignUp = () => {
                 </form>
                 {error && <p className="error">{"Please try again"}</p>} 
                 <div>
-                    <span>Already have an account?</span><Link to="/login">Login</Link>
+                    <span>Already have an account? </span><Link to="/login">Login</Link>
                 </div>
                
             </div>

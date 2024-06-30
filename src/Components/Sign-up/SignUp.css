@@ -10,7 +10,7 @@
 .signup__title {
   text-align: center;
   align-self: center;
-  color: pink;
+  color: black;
   font-weight: 700;
 }
 
@@ -21,10 +21,12 @@ form{
 
 .signup__container {
   display: flex;
+  width: 40%;
   flex-direction: column;
   text-align: center;
-  background-color: #83a197;
+  margin-top: 10%;
   padding: 30px;
+  border: solid 1px #83a197;
   border-radius: 20px;
 }
 .signup__textbox {
