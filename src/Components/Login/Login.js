@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../../AuthContext";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import './Login.css';
 
 
@@ -25,6 +25,15 @@ const Login = () => {
             setError(error.message);
         }
     };
+
+    // const handlePasswordReset = async () => {
+    //     try {
+    //         await sendPasswordResetEmail(auth, email);
+    //         console.log('Password reset email sent');
+    //     } catch (error) {
+    //         console.error('Error sending password reset email', error);
+    //     }
+    // };
 
     return (
         <div className="login">
@@ -53,7 +62,7 @@ const Login = () => {
                         Login
                     </button>
 
-                    <div className="forgot-password-link"><Link to="/reset">Forgot Password</Link>
+                    <div className="forgot-password-link"><Link to="/passwordreset">Forgot Password</Link>
                     </div>
                 </form>
                 {error && <p className="error">{error}</p>}
