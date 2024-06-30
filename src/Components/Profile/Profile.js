@@ -1,18 +1,20 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
-import { signOut } from "firebase/auth";
+import { useAuth } from "../../AuthContext";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import './Profile.css';
 
 
 const Profile = () => {
-    const location = useLocation();
+    const { currentUser, logout } = useAuth();
     const navigate = useNavigate();
-    const email = location.state?.email || " No email provided";
-    
-    const handleLogout = async () => {
+
+
+    const handleSignOut = async () => {
         try {
-            await signOut(auth);
+            await logout();
+            console.log("User signed out successfully!");
             navigate("/login");
         } catch (error) {
             console.log("Error signing out: ", error);
@@ -22,8 +24,8 @@ const Profile = () => {
     return (
         <div className="profile">
             <div className="profile__container">
-                <h1 className="profile__title">Hello, { email }</h1>
-                <button className="profile__btn" onClick={handleLogout}>Logout</button>
+                <h1 className="profile__title">Hello, {currentUser?.email}</h1>
+                <button className="profile__btn" onClick={handleSignOut}>Logout</button>
             </div>
         </div>
     );

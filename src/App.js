@@ -10,11 +10,12 @@ import SignUp from "./Components/Sign-up/SignUp";
 import Services from "./Components/Services/Services";
 import Profile from "./Components/Profile/Profile";
 import Maps from "./Components/Maps/Maps";
+import { AuthProvider } from "./AuthContext";
 
 
 
 function App() {
-  
+
   return (
     <Router>
       <NavigationBar />
@@ -25,11 +26,11 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile />} />
         <Route path="/Maps" element={<Maps />} />
       </Routes>
     </Router>
-   
+
   );
 }
 

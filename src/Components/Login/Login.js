@@ -1,6 +1,6 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { auth } from "../../firebase";
+import { useAuth } from "../../AuthContext";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import './Login.css';
 
@@ -10,7 +10,7 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
-    // const { setUser } = useContext(UserContext);
+    const { auth } = useAuth();
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
@@ -19,9 +19,9 @@ const Login = () => {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
             console.log('User Logged', userCredential);
             // setUser(userCredential.user.email);
-            navigate('/', { state: { email: userCredential.user.email } });
+            navigate('/profile', { state: { email: userCredential.user.email } });
         } catch (error) {
-            console.error('Error creating user', error);
+            console.error('Error logging in user', error);
             setError(error.message);
         }
     };
@@ -30,7 +30,7 @@ const Login = () => {
         <div className="login">
             <div className="login__container">
                 <h1 className="login__title">Login</h1>
-                <form>
+                <form onSubmit={handleLogin}>
                     <input
                         type="email"
                         className="login__textbox"
@@ -47,19 +47,17 @@ const Login = () => {
                         placeholder="Enter your password address"
                         required
                     />
-                    <button
+                    <button type="submit"
                         className="login__btn"
-                    // onClick={() => signInWithEmailAndPassword(email, password)} -- Need FIREBASE TOO
                     >
                         Login
                     </button>
-                    {/* <button className="login__btn google__login" onClick={signInWithGoogle}>
-                    Login with Google
-                </button> */}
-                    <div><Link to="/reset">Forgot Password</Link>
+
+                    <div className="forgot-password-link"><Link to="/reset">Forgot Password</Link>
                     </div>
                 </form>
-                <div>
+                {error && <p className="error">{error}</p>}
+                <div className="signup-link">
                     Don't have an account? <Link to="/signup">Sign-up</Link> now.
                 </div>
             </div>
